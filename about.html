@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="dreamachiever.png" type="image/x-icon">
+        <title>
+            About
+        </title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            body{
+                background-image: url(https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                height: auto;
+            }
+            #maindiv{
+                padding-left: 1%;
+                padding-right:1%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                margin: 0;
+                width: 98%;
+                height: auto;
+            }
+            #divoflogo{
+                height: 150px;
+                width: 100%;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #logo{
+                height: 150px;
+                width: 150px;
+                opacity: 0;
+                transform: translateY(200px);
+                animation: logoRise 1.6s ease forwards;
+            }
+            
+            @keyframes logoRise {
+                to{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            #mainab{
+                height: auto;
+                width: 98%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                padding-right: 1%;
+                padding-left: 1%;
+            }
+            .aboutdiv{
+                 opacity: 1;
+                 width:  96%;
+                 height: auto;
+                 padding-bottom: 1.5%;
+                 padding-left: 1.5%;
+                 padding-top: 1.5%;
+                 padding-right: 1.5%;
+                 background: rgba(22, 22, 22, 0.18);
+                 backdrop-filter: blur(5px);
+                 -webkit-backdrop-filter: blur(5px);
+                 border-radius: 20px;
+                 border: 1px solid rgba(255, 255, 255, 0.3);
+                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                 color: white;
+                 font-size: 20px;
+                 margin-bottom: 2.5%;
+                 box-shadow: 
+                   0 8px 32px rgba(0, 0, 0, 0.1),
+                   inset 0 1px 0 rgba(255, 255, 255, 0.5),
+                   inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+                   inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
+                 position: relative;
+                 overflow: hidden;
+            }
+            .about::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: linear-gradient(
+                   90deg,
+                   transparent,
+                   rgba(255, 255, 255, 0.8),
+                   transparent
+                   );
+            }
+            .about::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1px;
+                height: 100%;
+                background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0.8),
+                  transparent,
+                  rgba(255, 255, 255, 0.3)
+                 );
+            }
+            #backbtn{
+                 display:block;
+                 margin:60px auto;
+                 height:55px;
+                 width:70%;
+                 font-size:18px;
+                 font-weight:900;
+                 color:white;
+                 border-radius:35px;
+                 border:1px solid rgba(255,255,255,0.15);
+
+                 background:linear-gradient(145deg,#1a1a1a,#2b2b2b);
+                 box-shadow:
+                   0 8px 20px rgba(0,0,0,0.6),
+                   inset 0 0 12px rgba(255,255,255,0.05);
+
+                 cursor:pointer;
+                 transition:.3s;
+             }
+            #backbtn:hover{
+                 transform:translateY(-5px) scale(1.05);
+                 box-shadow:0 0 20px rgba(255,255,255,0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="maindiv">
+            <div id="divoflogo">
+                <img src="dreamachiever.png" alt="" id="logo">
+            </div>
+            <div id="mainab">
+                <h1 style="margin-left: 2%; color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 900; transform: translateX(-900);opacity: 0;">
+                     WHO IS BEHIND DREAM ACHIEVERS?
+                </h1>
+                <div class="aboutdiv">
+                    I AM NOT JUST A CREATOR. I AM A PERSON WHO BELIEVES THAT EVERY SMALL STEP CAN CHANGE A LIFE.THIS WEBSITE IS NOT BUILT FOR ENTERTAINMENT — IT IS BUILT TO CHANGE YOUR THINKING.
+                </div>
+                <div class="aboutdiv">
+                    <b style="color: blanchedalmond;font-size: 24px;">WHY I CREATED THIS?</b>
+                    <br>
+                    <br>
+                    I SAW PEOPLE WASTING TIME, LOSING FOCUS, AND GIVING UP ON THEIR DREAMS.SO I DECIDED TO BUILD SOMETHING THAT CAN PUSH PEOPLE FORWARD.EVERY PAGE HERE IS DESIGNED TO MAKE YOU THINK, ACT, AND IMPROVE.
+                </div>
+                <div class="aboutdiv">
+                    <b style="color: blanchedalmond;font-size: 24px;">MY GOAL</b>
+                    <br>
+                    <br>
+                    MY GOAL IS SIMPLE — TO HELP YOU TAKE ACTION.NOT JUST READ, NOT JUST WATCH… BUT ACT.IF THIS WEBSITE CAN CHANGE EVEN ONE PERSON’S LIFE, IT IS SUCCESSFUL.
+                </div>
+                <div class="aboutdiv">
+                    <b style="color: blanchedalmond;font-size: 24px;">FINAL MESSAGE</b>
+                    <br>
+                    <br>
+                     YOU ARE NOT HERE BY ACCIDENT. IF YOU ARE READING THIS, YOU HAVE SOMETHING BIG INSIDE YOU.NOW IT IS YOUR JOB TO PROVE IT.
+                </div>
+                <div style="height: auto; width: 100%; align-items: center;justify-content: center;display: flex;">
+                    <button id="backbtn">GO BACK</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('backbtn').addEventListener('click', function(){
+                window.location.href='index.html'
+            })
+        </script>
+    </body>
+</html>

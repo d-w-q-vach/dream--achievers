@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="dreamachiever.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>
+      Roadmaps
+    </title>
+    <style>
+      body{
+        background-image: url(https://images.pexels.com/photos/219998/pexels-photo-219998.jpeg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: #1a1a1a6b;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        height: auto;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+        font-weight: 900;
+        padding-bottom: 2%;
+      }
+       h1{
+        text-align:center;
+        margin-top:-10px;
+        font-size:42px;
+        letter-spacing:2px;
+        opacity:0;
+        transform:translateY(200px);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+        font-weight: 900;
+        animation:logoRise 1.6s ease forwards;
+      }
+      @keyframes logoRise{
+         to{
+            opacity:1;
+            transform:translateY(50px);
+           }
+       }
+
+      #selector{
+        margin-left: 5%;
+        width:90%;
+        display: inline-block;
+        margin-top:80px;
+        transform: translateY(60px);
+        transition: all 0.2s ease;
+      }
+      #selector.show{
+         transform:translateY(0);
+         opacity:1;
+      }
+
+      .option{
+        margin-bottom: 2%;
+        background:#555555;
+        padding:30px;
+        border-radius:14px;
+        cursor:pointer;
+        transition:.4s;
+        text-align:center;
+      }
+
+      .option:hover{
+        transform:scale(1.07);
+        box-shadow:0 0 25px rgba(146, 146, 146, 0.5);
+        background:#a1a1a120;
+      }
+
+      #roadmap{
+        display:none;
+        width:85%;
+        max-width:1000px;
+        margin:auto;
+        margin-top:80px;
+      }
+
+      .step{
+        background:#4a4a4a;
+        padding:25px;
+        margin:40px 0;
+        border-radius:12px;
+        opacity:0;
+        transform:translateY(80px);
+        transition:all .8s ease;
+      }
+
+      .step.show{
+        opacity:1;
+        transform:translateY(0);
+        box-shadow:0 0 20px rgba(210, 210, 210, 0.25);
+      }
+
+      .progressWrap{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:6px;
+        background:#2b2b2b;
+        z-index:9999;
+      }
+
+      .progressBar{
+        height:100%;
+        width:0%;
+        background:linear-gradient(90deg,#00f2ff,#00ff9d);
+        transition: width .15s linear;
+      }
+
+      .percent{
+        position:fixed;
+        top:10px;
+        right:20px;
+        font-size:14px;
+        opacity:.7;
+        z-index:9999;
+      }
+      .overlay{
+         position:fixed;
+         top:0;
+         left:0;
+         width:100%;
+         height:100%;
+         background:rgba(0,0,0,.45);
+         backdrop-filter:blur(6px);
+         z-index:-1;
+      }
+
+      @media(max-width:900px){
+        body{
+        margin: 0;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-image: url(https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: #1a1a1a6b;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        font-weight: 900;
+        color:white;
+        overflow-x:hidden;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+       h1{
+        text-align:center;
+        font-size:42px;
+        letter-spacing:2px;
+        opacity:0;
+        transform:translateY(200px);
+        animation:logoRise 1.6s ease forwards;
+      }
+      @keyframes logoRise{
+         to{
+            opacity:1;
+            transform:translateY(50px);
+           }
+       }
+
+      #selector{
+        margin-left: 5%;
+        width:90%;
+        display: inline-block;
+        margin-top:80px;
+        transform: translateY(60px);
+        transition: all 0.2s ease;
+      }
+      #selector.show{
+         transform:translateY(0);
+         opacity:1;
+      }
+
+      .option{
+        margin-bottom: 2%;
+        background:#838383;
+        padding:30px;
+        border-radius:14px;
+        cursor:pointer;
+        transition:.4s;
+        text-align:center;
+      }
+
+      .option:hover{
+        transform:scale(1.07);
+        box-shadow:0 0 25px rgba(146, 146, 146, 0.5);
+        background:#a1a1a120;
+      }
+
+      #roadmap{
+        display:none;
+        width:85%;
+        max-width:1000px;
+        margin:auto;
+        margin-top:80px;
+      }
+
+      .step{
+        background:#161616;
+        padding:25px;
+        margin:40px 0;
+        border-radius:12px;
+        opacity:0;
+        transform:translateY(80px);
+        transition:all .8s ease;
+      }
+
+      .step.show{
+        opacity:1;
+        transform:translateY(0);
+        box-shadow:0 0 20px rgba(210, 210, 210, 0.25);
+      }
+
+      .progressWrap{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:6px;
+        background:#222;
+        z-index:9999;
+      }
+
+      .progressBar{
+        height:100%;
+        width:0%;
+        background:linear-gradient(90deg,#00f2ff,#00ff9d);
+        transition: width .15s linear;
+      }
+
+      .percent{
+        position:fixed;
+        top:10px;
+        right:20px;
+        font-size:14px;
+        opacity:.7;
+        z-index:9999;
+      }
+      .overlay{
+         position:fixed;
+         top:0;
+         left:0;
+         width:100%;
+         height:100%;
+         background:rgba(0,0,0,.45);
+         backdrop-filter:blur(6px);
+         z-index:-1;
+      }
+    }
+
+     @media(max-width:500px){
+      body{
+        margin: 0;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-image: url(https://images.pexels.com/photos/3538721/pexels-photo-3538721.jpeg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: #1a1a1a6b;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        font-weight: 900;
+        color:white;
+        overflow-x:hidden;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+       h1{
+        text-align:center;
+        font-size:42px;
+        letter-spacing:2px;
+        opacity:0;
+        transform:translateY(200px);
+        animation:logoRise 1.6s ease forwards;
+      }
+      @keyframes logoRise{
+         to{
+            opacity:1;
+            transform:translateY(50px);
+           }
+       }
+
+      #selector{
+        width:90%;
+        max-width:1000px;
+        margin:auto;
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        gap:25px;
+        margin-top:80px;
+        transform: translateY(60px);
+        transition: all 0.2s ease;
+      }
+      #selector.show{
+         transform:translateY(0);
+         opacity:1;
+      }
+
+      .option{
+        background:#1b1b1b;
+        padding:30px;
+        border-radius:14px;
+        cursor:pointer;
+        transition:.4s;
+        text-align:center;
+      }
+
+      .option:hover{
+        transform:scale(1.07);
+        box-shadow:0 0 25px rgba(146, 146, 146, 0.5);
+        background:#a1a1a120;
+      }
+
+      #roadmap{
+        display:none;
+        width:85%;
+        max-width:1000px;
+        margin:auto;
+        margin-top:80px;
+      }
+
+      .step{
+        background:#161616;
+        padding:25px;
+        margin:40px 0;
+        border-radius:12px;
+        opacity:0;
+        transform:translateY(80px);
+        transition:all .8s ease;
+      }
+
+      .step.show{
+        opacity:1;
+        transform:translateY(0);
+        box-shadow:0 0 20px rgba(210, 210, 210, 0.25);
+      }
+
+      .progressWrap{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:6px;
+        background:#222;
+        z-index:9999;
+      }
+
+      .progressBar{
+        height:100%;
+        width:0%;
+        background:linear-gradient(90deg,#00f2ff,#00ff9d);
+        transition: width .15s linear;
+      }
+
+      .percent{
+        position:fixed;
+        top:10px;
+        right:20px;
+        font-size:14px;
+        opacity:.7;
+        z-index:9999;
+      }
+      .overlay{
+         position:fixed;
+         top:0;
+         left:0;
+         width:100%;
+         height:100%;
+         background:rgba(0,0,0,.45);
+         backdrop-filter:blur(6px);
+         z-index:-1;
+      }
+    }
+    #goback{
+      position: fixed;
+      font-size: 24px;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 10000;
+      color: white;
+      transition: 0.3s;
+    }
+    #goback:hover{
+      color: bisque;
+    }
+    </style>
+  </head>
+  <body>
+    <i class="fa-solid fa-arrow-left" id="goback"></i>
+    <script>
+      const GOback = document.getElementById('goback');
+       GOback.addEventListener('click', function(){
+         window.location.href='index.html';
+       })
+    </script>
+    <h1>
+      Choose Your Success Path
+    </h1>
+    <div id="selector"></div>
+    <div class="overlay"></div>
+    <div class="progressWrap">
+      <div class="progressBar" id="bar"></div>
+    </div>
+
+    <div class="percent" id="percent">
+      0%
+    </div>
+    <div id="roadmap"></div>
+
+    <script>
+      const paths = {
+        "CODING CAREER (SOFTWARE-ENGINEER)":[
+          "DO NOT LEARN PROGRAMMING LANGUAGE FIRST, LEARN THAT HOW IT WORKS AND WHAT ACTUALLY IT IS.",
+          "CHOOSE A LANGUAGE THAT FEELS EASY/COMFORTABLE TO YOU.(JAVASCRIPT IS RECOMMENDED BECAUSE THIS WEBSITE IS ALSO MADE WITH JAVASCRIPT)",
+          "CHOOSE A MAIN LANGUAGE. UNDERSTAND IT PERFECTLY.",
+          "PRACTICE CODING DAILY OR YOU WILL FORGET EVERYTHING. BY PRACTICING IT... YOU WILL UNDERSTAND PROBLEMS BY YOUR OWN.",
+          "BUILD YOUR FIRST SMALL PROJECT AND SHOW TO OTHERS THEN TAKE FEEDBACK. YOUR WEBSITE MUST BE WELL DESIGNED, NO MATTER IT'S JUST A PAGE OR NOT.",
+          "LEARN HTML AND CSS. THESE ARE FOR MAKING STRUCTURE OF YOUR WEBSITE AND DESIGNING IT",
+          "UNDERSTAND GIT. STOP MANUAL DEPLOY AND START TO DO DEPLOYING BY GIT AND DO WORKS WITH GIT",
+          "BUILD SMALL PROJECTS AND RESEARCH BIG WEBSITES, USE DEVELOPERS TOOL AND SEE HOW REAL WEBSITES ARE MADE",
+          "LEARN FRAMEWORKS. IT IS FOR MAKING YOUR WEBSITE BOTH WELL ANIMATED AND INTERACTIVE",
+          "COLLABORATE WITH OHTER DEVELOPERS AND LEARN MORE!"
+        ],
+        "ENTREPRENEURSHIP":[
+          "UNDERSTAND BUSINESS BASICS.",
+          "FIND A REAL PROBLEM",
+          "STUDY YOUR MARKET",
+          "CREATE A SIMPLE IDEA",
+          "BUILD PROTOTYPE(FIRST, MAKE IT REAL THEN MAKE IT BEAUTIFUL)",
+          "LAUNCH YOUR IDEA",
+          "PROMOTE IT",
+          "COLLECT FEEDBACK",
+          "IMPROVE PRODUCT",
+          "SCALE GRADUALLY"
+        ],
+        "CONTENT CREATION":[
+          "CHOOSE YOUR NICHE",
+          "STUDY SUCCESSFUL CREATORS",
+          "START POSTING CONSISTENTLY",
+          "IMPROVE STORYTELLING",
+          "LEARN EDITING SKILLS",
+          "BUILD YOUR STYLE",
+          "ENGAGE WITH AUDIENCE",
+          "COLLABORATE WITH CREATORS",
+          "MONITIZE CONTENT",
+          "GROW YOUR BRAND",
+        ],
+        "FINANCIAL WEALTH":[
+          "UNDERSTAND MONEY PRINCIPLES",
+          "TRACK SPENDING",
+          "BUILD SAVINGS HABITS",
+          "LEARN INVESTING BASICS",
+          "AVOID BAD DEBT",
+          "INCREASE INCOME SKILLS",
+          "CREATE SIDE INCOME",
+          "INVEST REGULARLY",
+          "AIM FOR FINANCIAL INDEPENDENCE",
+        ],
+        "LEADERSHIP":[
+          "IMPROVE COMMUNICATION",
+          "DEVELOP EMOTIONAL INTELLIGENCE",
+          "LISTEN CAREFULLY",
+          "TAKE RESPONSIBILITY",
+          "MAKE DECISIONS",
+          "GUIDE TEAMS",
+          "RESOLVE CONFLICTS",
+          "INSPIRE PEOPLE",
+          "BUILD TRUST",
+          "CREATE IMPACT",
+        ],
+        "ACADEMIC EXCELLENCE":[
+          "SET CLEAR STUDY GOALS",
+          "CREATE STUDY SCHEDULE",
+          "FOCUS DEEPLY",
+          "REVIEW DAILY",
+          "ASK QUESTIONS",
+          "TEACH OTHERS",
+          "DEVELOP CRITICAL THINKING",
+          "STUDY BEYOND TEXTBOOKS",
+          "PRACTICE EXAMS",
+          "CONTINUE LIFELONG LEARNING",
+        ],
+        "PERSONAL MASTERY":[
+          "UNDERSTAND YOURSELF",
+          "BUILD HEALTHY HABITS",
+          "CONTROL YOUR TIME",
+          "EXERCISE DAILY",
+          "MEDITATE",
+          "SET GOALS",
+          "TRACK PROGRESS",
+          "STAY DESCIPLINED",
+          "LIVE WITH PURPOSE",
+        ],
+      };
+      const selector=document.getElementById("selector");
+      const roadmap=document.getElementById("roadmap");
+      const bar=document.getElementById("bar");
+      const percent=document.getElementById("percent");
+
+      Object.keys(paths).forEach(path=>{
+
+         let div=document.createElement("div");
+         div.className="option";
+         div.innerText=path;
+
+         div.onclick=()=>{
+           startRoadmap(path);
+         };
+
+         selector.appendChild(div);
+
+      });
+
+       function startRoadmap(path){
+
+         selector.style.opacity="0";
+
+         setTimeout(()=>{
+          selector.style.display="none";
+          roadmap.style.display="block";
+          loadSteps(paths[path]);
+         },500);
+
+       }
+
+       function loadSteps(steps){
+
+          roadmap.innerHTML="";
+
+          steps.forEach(text=>{
+          let div=document.createElement("div");
+          div.className="step";
+          div.innerText=text;
+          roadmap.appendChild(div);
+          observer.observe(div); 
+          });
+
+        }
+
+        function reveal(){
+
+           const steps=document.querySelectorAll(".step");
+
+           let trigger=window.innerHeight*0.85;
+
+           steps.forEach(step=>{
+             let top=step.getBoundingClientRect().top;
+
+             if(top<trigger){
+               step.classList.add("show");
+             }
+           });
+
+        }
+
+        function progress(){
+
+          let scrollTop=document.documentElement.scrollTop;
+          let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+
+          let value=(scrollTop/height)*100;
+
+          bar.style.width=value+"%";
+          percent.innerText=Math.round(value)+"%";
+
+         }
+
+        window.addEventListener("scroll",()=>{
+          reveal();
+          progress();
+        });
+        const observer = new IntersectionObserver(entries=>{
+         entries.forEach(entry=>{
+            if(entry.isIntersecting){
+              entry.target.classList.add("show");
+             }else{
+              entry.target.classList.remove("show");
+            }
+          });
+        },{threshold:0.1});
+          document.getElementById("selector").forEach(el=>{
+             observer.observe(el);
+           });  
+    </script>
+  </body>
+</html>

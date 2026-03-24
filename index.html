@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="dreamachiever.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Dream-achievers
+  </title>
+  <style>
+    body {
+     background-image: url(https://img.freepik.com/free-photo/high-angle-shot-beautiful-cityscape-sunset-new-york-city-usa_181624-42898.jpg);
+     background-size: cover;
+     background-attachment: fixed;
+     background-color: #1a1a1a6b;
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: auto;
+    }
+    #divone {
+      width: 100%;
+      min-height: 194vh;
+      box-sizing: border-box;
+    }
+
+    #divforlogo {
+      width: 100%;
+      height: 200px;
+      margin-top:0%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #logo {
+      max-width: 100%;
+      height: 195px;
+      opacity:0;
+      transform:translateY(200px);
+      animation:logoRise 1.6s ease forwards;
+    }
+    @keyframes logoRise{
+     to{
+      opacity:1;
+      transform:translateY(0);
+     }
+    }
+    #divforbtns{
+      margin-top: 2%;
+      height: 20vh;
+      width: 100%;
+      display: flex;
+      margin-top: 2%;
+      justify-content: center;
+    }
+    #strt{
+     position:relative;
+     margin-top:7%;
+     height:55px;
+     width:210px;
+     font-size:20px;
+     font-weight:900;
+     letter-spacing:1px;
+     color:white;
+
+     border-radius:35px;
+     border:1px solid rgba(255,255,255,0.15);
+     cursor:pointer;
+     overflow:hidden;
+  
+     background:linear-gradient(145deg,#1a1a1a,#2b2b2b);
+     box-shadow:
+     0 8px 20px rgba(0,0,0,0.6),
+     inset 0 0 12px rgba(255,255,255,0.05);
+
+     transition:all .35s ease;
+     opacity: 0;
+
+     animation: buttonrise 2.6s ease forwards;
+   }
+
+   @keyframes buttonrise {
+     to{
+      opacity: 1;
+     }
+   }
+
+   #strt::before{
+     content:"";
+     position:absolute;
+     inset:-2px;
+     border-radius:40px;
+     background:linear-gradient(120deg,transparent,#ffffff30,transparent);
+     opacity:0;
+     transition:opacity .4s ease;
+   }
+
+   #strt:hover{
+     transform:translateY(-4px) scale(1.05);
+     box-shadow:
+     0 12px 30px rgba(0,0,0,0.8),
+     0 0 15px rgba(255,255,255,0.15);
+   }
+
+   #strt:hover::before{
+     opacity:1;
+     animation:lightSweep 1.2s ease forwards;
+    }
+
+   @keyframes lightSweep{
+     from{
+       transform:translateX(-100%);
+     }
+     to{
+       transform:translateX(0%);
+     }
+   }
+
+   #strt:active{
+     transform:scale(0.96);
+   }
+    #hdings{
+      font-size: 25px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-weight: 900;
+      color: white; 
+      opacity:0;
+      transform:translateX(-890px);
+      animation:hdRise 2.6s ease forwards;
+    }
+    @keyframes hdRise{
+     to{
+      opacity:1;
+      transform:translateY(0);
+     }
+    }
+    #hdiv{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    #fter{
+      margin-top: 12%;
+      height: 550px;
+      padding-top: 10%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    #paratwo{
+      color: white;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 170%;
+    }
+    #dvforbtnsss{
+      height: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #btnss{
+      height: 70%;
+      width: 20%;
+    }
+    .buttons{
+      height: 50px;
+      width: 96%;
+      display: block;
+      margin-top:7.8%;
+      margin-left: 2%;
+      border-radius:35px;
+      border:1px solid rgba(255,255,255,0.15);
+      cursor:pointer;
+      overflow:hidden;
+      color: white;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-weight: 900;
+      background-Image:linear-gradient(145deg,#1a1a1a,#2b2b2b);
+      box-shadow:0 8px 20px rgba(0,0,0,0.6), inset 0 0 12px rgba(255,255,255,0.05);
+      transform:translateY(100px);
+      opacity:0;
+      transition:all 1s ease;
+    }
+    .buttons:hover{
+      background-image: none;
+      background-color: #b4b3b3;
+      height: 70px;
+      color: black;
+    }
+    .buttons.show{
+      transform:translateY(0);
+      opacity:1;
+    }
+
+    @media (max-width: 900px) {
+     body {
+      background-image: url(https://images.pexels.com/photos/3586966/pexels-photo-3586966.jpeg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-color: #1a1a1a6b;
+      backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     }
+      #strt{
+        margin-top: 30%;
+        height: 120px;
+        width: 40%;
+        font-size: 30px;
+      }
+      #divone{
+        align-items: baseline;
+      }
+      #logo{
+        width: 190px;
+        height: 190px;
+      }
+      #divforlogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height:250px;
+      }
+      #fter{
+        margin-top: 50%;
+      }
+      #btnss{
+        margin-top: 50%;
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body{
+        margin: 0;
+        background-image: url(https://img.freepik.com/free-photo/beautiful-urban-city-with-amazing-clouds-sky-background_181624-1819.jpg?ga=GA1.1.475786265.1772462852&semt=ais_hybrid&w=740&q=80);
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: #1a1a1a6b;
+        backdrop-filter: blur(10px);
+       -webkit-backdrop-filter: blur(10px);
+      }
+      #divone{
+        align-items:baseline;
+      }
+      #divforlogo {
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height:230px;
+      }
+      #logo{
+        width: 145px;
+        height: 145px;
+      }
+      #hdings{
+        font-size: 15px;
+      }
+      #strt{
+        height: 70px;
+        width: 50%;
+        margin-top: 40%;
+        font-size: 25px;
+      }
+      #fter{
+        margin-top: 90%;
+      }
+      #paratwo{
+        font-size:15px
+      }
+      #btnss{
+        margin-top: 40%;
+        width: 70%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+      <div id="divone" class="screen">
+    <div id="divforlogo">
+      <img src="dreamachiever.png" alt="Logo" id="logo">
+    </div>
+    <div id="hdiv">
+      <p id="hdings">
+        DEAR BIG DREAMER, WELCOME TO <b>DREAM ACHIEVERS</b>. EVERY SMALL STEP YOU TAKE BUILDS YOUR EMPIRE AND VISITING THIS WEB IS ONE OF THOSE STEPS! 
+        <br>
+        <br>
+        ALWAYS REMEMBER, "LITTLE DROPS OF WATER CREATES THE SEA" AND THAT IS HOW "LITTLE STEPS FOR SUCCESS BRINGS SUCCESS CLOSER TO YOU!".
+      </p>
+    </div>
+    <div id="divforbtns">
+     <button id="strt">
+      Lets Start
+    </button>
+    <script>
+      let button = document.getElementById('strt');
+      button.addEventListener('click', function (){
+        window.scrollTo({
+          top:document.body.scrollHeight,
+          behavior:"smooth"
+        });
+      })
+    </script>
+    </div>
+    <div id="fter">
+      <p id="paratwo">
+        CONGRATULATIONS! YOU CLICLED THE BUTTON AND PROVED THAT YOU ARE WITH ME!
+        <br>
+        THIS IS ONE OF YOUR STEPS THAT CAN BRING YOU ONE STEP CLOSER TO SUCCESS!
+      </p>
+      <div id="dvforbtnsss">
+        <div id="btnss">
+          <button id="Motivation" class="buttons">
+            MOTIVATONS
+          </button>
+          <script>
+            let motivation = document.getElementById('Motivation');
+            motivation.addEventListener('click', function (){
+              window.location.href='motiv.html';
+            });
+          </script>
+          <button id="articles" class="buttons">
+            ARTICLES
+          </button>
+          <script>
+            let art = document.getElementById('articles')
+            art.addEventListener('click', function(){
+              window.location.href='art.html';
+            });
+          </script>
+          <button id="roadmap" class="buttons">
+            ROADMAP
+          </button>
+          <script>
+            let roadmap = document.getElementById('roadmap');
+            roadmap.addEventListener('click', function(){
+              window.location.href='roadmap.html';
+            });
+          </script>
+          <button id="about" class="buttons">
+            ABOUT
+          </button>
+          <script>
+            let about = document.getElementById('about');
+            about.addEventListener('click', function(){
+              window.location.href='about.html';
+            });
+          </script>
+          <script>
+             const title = document.getElementById('paratwo')
+             const cards = document.querySelectorAll(".buttons");
+             function reveal(){
+              let trigger = window.innerHeight * 1;
+              cards.forEach(card =>{
+                let top = card.getBoundingClientRect().top;
+                   if(top < trigger){
+                    card.classList.add("show");
+                  }
+              });
+            }
+             window.addEventListener("scroll", reveal);
+             reveal();
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

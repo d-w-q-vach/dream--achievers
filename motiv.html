@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Motivations
+    </title>
+    <link rel="shortcut icon" href="dreamachiever.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+      html{
+        scroll-behavior: smooth;
+        margin:0;
+        padding:0;
+      }
+      body{
+        background:#111;
+        margin:0;
+        padding:0;
+        background-image: url(https://images.unsplash.com/photo-1585543253202-04d3d9f11961?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: #1a1a1a6b;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        height: auto;
+      }
+      #imgformotiv{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+      }
+      #DAimg{
+        height: 150px;
+        width: 150px;
+        opacity:0;
+        transform:translateY(200px);
+        animation:logoRise 1.6s ease forwards;
+      }
+      @keyframes logoRise{
+        to{
+           opacity:1;
+           transform:translateY(0);
+          }
+      }
+      #maindivofmotiv{
+        background-color: #1a1a1a6b;
+        border-radius: 10px;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        height: auto;
+        width: 100%;
+      }
+      #headingofmotiv{
+        margin-left: 3%;
+        color: white;
+        font-weight: 900;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 30px;
+        opacity:0;
+        transform:translateX(-900px);
+        animation:hdRise 2.6s ease forwards;
+      }
+       @keyframes hdRise{
+         to{
+          opacity:1;
+          transform:translateY(0);
+         }
+       }
+      .motivations{
+        color: white;
+        font-size: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom: 2%;
+        opacity:0;
+        transform: translateY(60px);
+        transition: all 0.2s ease;
+      }
+      .motivations.show{
+        transform:translateY(0);
+        opacity:1;
+      }
+      ul{
+       padding:40px;
+      }
+
+      li{
+       line-height:1.6;
+      }
+      .divformot{
+        height: auto;
+        width: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background: rgba(64, 64, 64, 0.14);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        border: 1px solid rgba(64, 64, 64, 0.48);
+      }
+     @media (max-width: 480px){
+      body{
+        background-image: url(https://images.pexels.com/photos/1906658/pexels-photo-1906658.jpeg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: #1a1a1a6b;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .divformot{
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-left: -11%;
+        margin-right: -11%;
+        margin-bottom: 2%;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 
+          0 8px 32px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5),
+          inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+          inset 0 0 0px 0px rgba(255, 255, 255, 0);
+        position: relative;
+        overflow: hidden;
+        opacity:0;
+        transform: translateY(100px);
+        transition: all 0.8s ease;
+      }
+     .divformot.show{
+        transform:translateY(0);
+        opacity:1;
+     }
+
+     .divformot::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.8),
+          transparent
+        );
+      }
+
+     .divformot::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.8),
+          transparent,
+          rgba(255, 255, 255, 0.3)
+        );
+      }
+    }
+    #back{
+       position: absolute;
+    }
+    #black:hover{
+      color:rgb(0, 0, 0);
+    }
+    #goback{
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10000;
+      color: white;
+      transition: 0.3s;
+    }
+    #goback:hover{
+      color: bisque;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="maindiv">
+      <i class="fa-solid fa-arrow-left"id="goback"></i>
+       <script>
+         document.getElementById('goback').style.cursor='pointer';
+         document.getElementById('goback').addEventListener('click', function(){
+           window.location.href='index.html';
+         });
+       </script>
+      <div id="imgformotiv">
+        <img src="dreamachiever.png" alt="#" id="DAimg">
+      </div>
+      <div id="maindivofmotiv">
+        <p id="headingofmotiv">
+          LET ME MOTIVATE YOU FIRST! READ EACH POINT VERY CAREFULLY, THIS MAY CHANGE YOUR LIFE DEAR READER...
+        </p>
+        <br>
+        <p style="margin-left: 2%; color:white; font-family: 'Courier New', Courier, monospace;">
+          scroll and read and thank me later if you understand my words...
+        </p>
+        <br>
+        <ul>
+          <li class="motivations">
+            <div class="divformot">
+            <b>Stop waiting for the perfect time.</b>
+            <br>
+            The perfect time does not exist. Start with what you have today. Most of the rich persons did not have anything at first. Like Google,one of the most used app in daily life, sarted with   just a computer in a small room (Garage)
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Your future depends on what you do every day.</b>
+              <br>
+              If you waste today, you are also wasting your future. You waste a whole day means you muissed uncountable chances to correct your faults. So friend, always remember, comfort zone is not for you unless you achieve your own succes
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+             <b>Do something that others are too lazy to do</b>
+             <br>
+             That is where success begins. Work when others spend time by watching reels or just sleeping. Always remember, the more you pay attention and work, the more you will find problems and the more you find problems, the more you will get the chance to solve those and know how to solve them.
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Learn new skills again and again.</b>
+              <br>
+              The more useful skills you have, the more money you can make. Now a days, skills are more precious than degrees. Even a 15 year old boy can buy lambo because of using his skills. Don't you want to make this kind of goal? <b style="color: blanchedalmond;">WHAT ABOUT ENTERING TO THE COLLEGE WITH YOUR DREAM CAR/BIKE THAT IS BOUGHT BY YOUR EARNED MONEY??</b>
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+             <b>Use your time carefully.</b>
+             <br>
+             Time is more valuable than money. Once it is gone, you cannot get it back. Suppose you have 3 currencies. Money,Knowledge and Time, When you need one of them, just use other two currencies correctly to get that! And time is the most valuable one. Once it's gone, will never gonna come back. most peple fails for late startup. So <b style="color: blanchedalmond;">START NOW!!!</b>
+             </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Do not fear failure.</b>
+              <br>
+              Every failure teaches you how to do it better next time. Yes friend, Every time you fail, you get another chance to learn about another problem and learn how to solve it as well. So , It is real that failure is the key of success. Every time you fail, you learn how to solve it. fail again, again, again, again and again but <b style="color: blanchedalmond;">UNDERSTANT THE PROBLEM CLEARLY AND SOLVE IT FROM THE ROOT.</b>
+           </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot"> 
+              <b>Stay away from people who only complain.</b>
+              <br>
+              Stay close to people who work hard and think big. I am not telling you to avoid bad friends, they are friends at the end of the day. But try to avoud every person who can disturb you and who only complains about you, does not give you any encourangement or solutions.
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Small progress every day is powerful.</b>
+              <br>
+              Even 1% improvement daily can change your life. Suppose you success percentage is 100% and you are in 0%. if you work daily, it can bring you one percent closer to your success. As I said in the very beggining of the website that little drops of water makes a whole sea and little steps for success brings you closer to you dream, your success
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Be patient but keep working.</b>
+              <br>
+              Success does not come in one day, but daily work brings it closer.Only by patience, success can be achieved. Look at Mark Muckerburg, the creator of Facebook, did not have any worldwide users first, have nothing ar that time when facemook came (in 2004). But now, It is the biggest social media platform in the world. Most of the people does not have patience, That is why in a school, A few of students become rich, <b style="color: blanchedalmond;">ONLY A FEW</b>
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Take responsibility for your life.</b>
+              <br>
+              Do not blame luck or others. Your life is in your hands. What you will do, you will be definitely awarded by God in the future. Because, There are lots of pages in every persons life that is weitten as what that person actually wants. Work hard and smart, God will give you what you want in future...
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Do not live the same day again and again.</b>
+              <br>
+              If every day looks the same, your future will also stay the same. Change your routine, change yourself,Change your everything and start a new life before it is too late. Be a Perfect, powerful and emotionaly strong Man/Woman.
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Start before you feel ready.</b>
+              <br>
+              Most successful people began when they were scared and unsure.Start with what you have right now. Do not wait for chances, it harms your mindset and you may feel lazy about working.
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Do not waste energy proving people wrong.</b>
+              <br>
+              Use that energy to build your success. Do not even try to show people that what you can do how much you know. It destroyed your energy. Never ever try to compete with others like you. Always remember, <b style="color: blanchedalmond;">YOU ARE IN A COMPETITION WITH THE FATHERS OF YOUR RICH FRIENDS!</b>
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Your phone can build your future or destroy your time.</b>
+              <br>
+              Use it to learn, build, and grow.Watch how you can earn, How you can use your time to build your empire. Everything you can find in internet. Now ,All is on your hands. If you use your opportunity, you may have a bright future, you may fulfill your dreams. Else, You have to do 9-5 jobs and get monthly salary and just <b style="color: blanchedalmond;"> STOP DREAMING TO BE A RICH PERSON</b>
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Rich people focus on both problems and opportunities.</b>
+              <br>
+              Most people only focus on problems.That is the biggest problem. You should not just focus only promlems. Besides, You should use all the opportunities if you have.
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Discipline is doing the work even when you do not feel like it.</b>
+              <br>
+              This is where winners are made. If you have a correct descipline, I do not need to motivate you. You are already in a zone. As a big dreamer, You have to stay desciplined. If not, your life will be randomly messy. And a person with a messy life can not ever get the success. 
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Your life changes when your mindset changes.</b>
+              <br>
+              Think bigger, act bigger. When you commit to stay like a reach person, your mind will automatically turn on the rich mode. Than is how mindset comes. A good mindset will not only make you rich but also make you a great man. so always try to fix your mindset if you need because <b style="color: blanchedalmond;">MINDSET IS YOUR MAIN ENERGY</b>
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>One good idea can change your whole life.</b>
+              <br>
+              But ideas only work when you act on them. Got an idea? Use that and see what happens. failed? No problem, try another way brother. The more you get idea the more you can get a clear idea about earnings. Another thing, <b style="color: blanchedalmond;">YOU MAY CHANGE YOUR WAY, BUT NEVER CHANGE YOUR AIM</b>
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Do not compare your start to someone else's finish.</b>
+              <br>
+              Everyone begins somewhere. The successful one was never sure about his/her startup. He/she just believed to focus on his/her work and idea. After trying lots of time and failing lots of time, once he/she saw some marks of hope. Then he/she tried more and afterwall, Got his/her successful life. It is not about luch , it is all about how you worked, how unique your ideas was, how much you tried, how mush you now etc...
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b>Your future self is watching you right now.</b>
+              <br>
+              Make choices today that your future self will thank you for. A right choice/decision decides how your future will be. Take the right decision today, get rewards in the future.
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b style="color: red;">Do not try to stuck yourself in relationships and love!!!</b>
+              <br>
+              If you are a big dreamer, if you want to surprize your mom and dad by earning in an early age (legally), if you really want to surprise your courtry, if you really want to be the Headline Of The Newspaper, you must have to focust on your career and your work, not on your love. As i said, comfort is not for you unless you achieve you success. I am not lying, it is a fact. Most of the time, people do relationships, stuck in love and just finished themselves after when it breaks up. I am telling a thing continuously that is <b style="color: cadetblue;">'Sacrifice now, get rewards in future'</b>. There is no meaning doing these things, do not waste you time ,Time will not wait for you.
+            </div>
+          </li>
+          <li class="motivations">
+            <div class="divformot">
+              <b style="color: aliceblue;">I can only give you ideas and motivate you
+              <br>
+               <b style="color: aqua;">
+                 As I said, all are on your hands. You will get rewrds for what you do in present. I can just motivate you and give you ideas, roadmaps that what you should do and what not. I can not make something for you directly. Your have to make your systems so that you can earn from there. Best of luck ,Have a bright future.
+               </b>
+            </div>
+          </li>
+        </ul>
+        <script>
+            const observer = new IntersectionObserver(entries=>{
+               entries.forEach(entry=>{
+                 if(entry.isIntersecting){
+                   entry.target.classList.add("show");
+                 }else{
+                   entry.target.classList.remove("show");
+                }
+            });
+           },{threshold:0.1});
+           document.querySelectorAll(".motivations").forEach(el=>{
+             observer.observe(el);
+           });       
+           document.querySelectorAll(".divformot").forEach(el=>{
+             observer.observe(el);
+           });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

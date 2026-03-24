@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="dreamachiever.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>
+      Articles
+    </title>
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+      body{
+        background-image: url(https://img.freepik.com/premium-vector/night-scenery-with-full-moon-mountain-river_104785-188.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        backdrop-filter: blur(13px);
+        -webkit-backdrop-filter: blur(13px);
+        background-color: rgba(0, 0, 0, 0.137);
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+      #divimg{
+        height: 150px;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #mainimg{
+        height: 150px;
+        width: 150px;
+        opacity: 0;
+        transform: translateY(200px);
+        animation: logoRise 1.6s ease forwards;
+      }
+      @keyframes logoRise {
+        to{
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      #divofart{
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        margin-left: 2%;
+        width: 94%;
+        padding-bottom: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 1%;
+      }
+      .articles{
+        padding-bottom: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 1%;
+        background-color: rgba(134, 134, 134, 0.274);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+        border-radius: 13px;
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom: 5%;
+      }
+      #heading{
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 900;
+        margin-left: 3%;
+        margin-bottom: 8%;
+        opacity:0;
+        transform:translateX(-900px);
+        animation:hdRise 2.6s ease forwards;
+      }
+       @keyframes hdRise{
+         to{
+          opacity:1;
+          transform:translateY(0);
+         }
+       }
+       #goback{
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 10000;
+       }
+       #goback:hover{
+        color: bisque;
+       }
+       b{
+        font-size: 18px;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="divone">
+      <i class="fa-solid fa-arrow-left" id="goback"></i>
+      <script>
+        document.getElementById('goback').addEventListener('click', function () {
+          window.location.href='index.html'
+        })
+      </script>
+      <div id="divimg">
+        <img src="dreamachiever.png" alt="#" id="mainimg">
+      </div>
+      <div id="divofart">
+        <h1 id="heading">HERE ARE SOME ARTICLES FOR YOU</h1>
+        <div class="articles">
+          <b>1. Success Begins with Clarity of Purpose</b>
+          <br>
+          <br>
+          Success always begins with a clear sense of purpose. Without knowing what you truly want, it becomes easy to drift through life without direction. Many people work hard but still feel unfulfilled because their efforts are not aligned with their deeper goals. When you take time to define your purpose, you give your actions meaning and direction. Purpose acts like a compass, guiding you through decisions, challenges, and distractions.
+          <br>
+          <br>
+          Having clarity does not mean you will have everything figured out from the start. It simply means you are aware of what matters most to you and are willing to pursue it. Your purpose can evolve over time as you grow and gain new experiences. What’s important is staying connected to your values and adjusting your path when needed.
+          <br>
+          <br>
+          A clear purpose also strengthens your motivation. When difficulties arise—and they always do—it reminds you why you started. This inner drive helps you push forward when external rewards are not immediately visible. In the long run, people who succeed are not just those who work hard, but those who work with intention. When your purpose is clear, even small steps feel meaningful, and your journey becomes as valuable as the destination.
+        </div>
+        <div class="articles">
+          <b>2. Consistency is More Powerful Than Talent</b>
+          <br>
+          <br>
+          Talent is often admired, but consistency is what truly creates success. While natural ability can provide an early advantage, it is not enough to guarantee long-term achievement. Many talented individuals fail to reach their potential because they lack the discipline to stay consistent. On the other hand, people with average abilities often surpass expectations through steady effort and determination.
+          <br>
+          <br>
+          Consistency is about showing up every day, even when you don’t feel motivated. It means committing to your goals and putting in the work regardless of your mood or circumstances. Over time, these small, repeated efforts build momentum and lead to significant results. This process is known as compounding, where progress gradually accelerates due to continuous effort.
+          <br>
+          <br>
+          Another important aspect of consistency is improvement. When you practice regularly, you naturally refine your skills and become more efficient. Mistakes become learning opportunities, and challenges become stepping stones. Success is rarely the result of one big moment; instead, it is the outcome of countless small actions performed consistently over time.
+          <br>
+          <br>
+          Ultimately, consistency builds trust in yourself. It proves that you can rely on your own efforts, which increases confidence and resilience. In any field or path, those who stay committed and consistent will always have an advantage over those who rely solely on talent.
+        </div>
+        <div class="articles">
+          <b>3. Failure is a Stepping Stone, Not the End</b>
+          <br>
+          <br>
+          Failure is often seen as something negative, but in reality, it is one of the most valuable parts of the journey toward success. Every failure carries a lesson that can guide you toward improvement. Instead of fearing failure, it should be embraced as a natural and necessary step in growth. Those who succeed are not those who avoid failure, but those who learn how to respond to it.
+          <br>
+          <br>
+          When you fail, you gain insight into what doesn’t work. This knowledge is powerful because it helps you refine your approach and make better decisions in the future. Failure also builds resilience, teaching you how to handle disappointment and keep moving forward despite setbacks. These qualities are essential for long-term success.
+          <br>
+          <br>
+          Another important benefit of failure is that it strengthens your character. It challenges your patience, determination, and willingness to improve. Each time you overcome a setback, you become more confident in your ability to face future challenges. Over time, this mindset transforms failure from something to fear into something to value.
+          <br>
+          <br>
+          Rather than seeing failure as the end of your journey, view it as a temporary obstacle. It is not a sign that you are incapable, but a sign that you are trying. With the right perspective, failure becomes a stepping stone that leads you closer to success.
+        </div>
+        <div class="articles">
+          <b>4. Adaptability is the Key to Long-Term Success</b>
+          <br>
+          <br>
+          In a world that is constantly changing, adaptability has become one of the most important qualities for success. New technologies, ideas, and challenges emerge every day, and those who cannot adjust often struggle to keep up. Being adaptable means being open to change, willing to learn, and ready to adjust your approach when necessary.
+          <br>
+          <br>
+          Adaptability allows you to respond effectively to unexpected situations. Instead of resisting change, you learn to embrace it and find opportunities within it. This mindset helps you stay relevant and competitive in any field. It also reduces stress, as you become more comfortable dealing with uncertainty.
+          <br>
+          <br>
+          Another important aspect of adaptability is continuous learning. When you are open to new knowledge and experiences, you expand your skills and improve your ability to handle different situations. This flexibility enables you to grow both personally and professionally.
+          <br>
+          <br>
+          Importantly, being adaptable does not mean abandoning your goals. It means finding new ways to achieve them. Life rarely goes exactly as planned, and those who succeed are the ones who can adjust their path without losing sight of their destination. By developing adaptability, you prepare yourself for long-term success in an ever-changing world.
+        </div>
+        <div class="articles">
+          <b>5. Discipline Builds the Foundation of Success</b>
+          <br>
+          <br>
+          Discipline is the backbone of success. While motivation can help you get started, it is discipline that keeps you going when things become difficult. Many people rely on motivation, but it is often temporary and unpredictable. Discipline, on the other hand, is built through habits and routines that keep you consistent.
+          <br>
+          <br>
+          When you develop discipline, you train yourself to take action regardless of how you feel. This ability is crucial because success often requires doing things that are not always enjoyable. Whether it is studying, working, or practicing a skill, discipline ensures that you continue making progress.
+          <br>
+          <br>
+          Discipline also helps you manage your time and energy effectively. It allows you to prioritize important tasks and avoid distractions that can slow you down. Over time, disciplined actions become habits, making it easier to stay on track without constant effort.
+          <br>
+          <br>  
+          Moreover, discipline builds self-control and resilience. It strengthens your ability to stay focused on your goals despite challenges and setbacks. With discipline, even the most ambitious goals become achievable because you are willing to put in the necessary effort. In the end, discipline transforms potential into real, lasting success.      
+        </div>
+        <div class="articles">
+          <b>6. Surround Yourself with Positive Influences</b>
+          <br>
+          <br>
+          The people around you have a powerful impact on your mindset, behavior, and overall success. Humans are naturally influenced by their environment, and the attitudes of those around you can shape your own thinking. Positive influences encourage growth, while negative ones can limit your potential.
+          <br>
+          <br>
+          When you surround yourself with supportive and motivated individuals, you are more likely to adopt similar habits and attitudes. These people inspire you to work harder, think bigger, and stay focused on your goals. They also provide encouragement during difficult times, helping you stay motivated.
+          <br>
+          <br>
+          On the other hand, negative influences can create doubt, reduce confidence, and discourage progress. Constant exposure to negativity can make it harder to believe in yourself and your goals. This is why it is important to be mindful of who you spend your time with.
+          <br>
+          <br>
+          Building a positive environment does not mean avoiding all criticism, but it means choosing people who genuinely want to see you succeed. A strong support system can make your journey easier and more enjoyable. Ultimately, surrounding yourself with the right influences can significantly increase your chances of success.
+        </div>
+        <div class="articles">
+          <b>7. Self-Belief Fuels Achievement</b>
+          <br>
+          <br>
+          Self-belief is a powerful force that drives success. Without confidence in your abilities, it becomes difficult to take risks, pursue opportunities, or overcome challenges. Believing in yourself does not mean thinking you are perfect—it means trusting your ability to learn, grow, and improve.
+          <br>
+          <br>
+          Confidence often develops through experience. Each time you try something new or overcome a challenge, your belief in yourself grows stronger. Even failures contribute to this process by teaching you valuable lessons and building resilience.
+          <br>
+          <br>
+          Self-belief also affects how you approach opportunities. When you believe in yourself, you are more likely to step outside your comfort zone and take on challenges that can lead to growth. This willingness to act is essential for success, as many opportunities require courage and initiative.
+          <br>
+          <br>
+          Additionally, self-belief influences how others perceive you. Confidence can inspire trust and respect, opening doors that might otherwise remain closed. However, true self-belief comes from within and is built over time through effort and persistence. When you truly believe in yourself, you unlock your potential and move closer to achieving your goals.
+        </div>
+        <div class="articles">
+          <b>8. Time Management Defines Productivity</b>
+          <br>
+          <br>
+          Time is one of the most valuable resources you have, and how you use it plays a major role in your success. Everyone has the same 24 hours in a day, but the difference lies in how effectively those hours are used. Good time management allows you to focus on what truly matters and avoid unnecessary distractions.
+          <br>
+          <br>
+          Planning is a key aspect of time management. By setting clear priorities and organizing your tasks, you can ensure that your efforts are directed toward meaningful goals. This reduces wasted time and increases productivity. It also helps you stay focused and motivated throughout the day.
+          <br>
+          <br>
+          Another important factor is avoiding procrastination. Delaying important tasks can create stress and reduce the quality of your work. By developing discipline and staying organized, you can overcome procrastination and make better use of your time.
+          <br>
+          <br>
+          Effective time management also creates balance in your life. It allows you to allocate time for work, rest, and personal activities, ensuring that you remain productive without becoming overwhelmed. In the long run, managing your time wisely leads to greater efficiency, less stress, and a higher level of success.
+        </div>
+        <div class="articles">
+          <b>9. Continuous Learning Keeps You Ahead</b>
+          <br>
+          <br>
+          In today’s fast-changing world, continuous learning is essential for success. Knowledge is constantly evolving, and those who stop learning risk falling behind. Successful individuals understand that growth does not end with formal education—it is a lifelong process.
+          <br>
+          <br>
+          Learning can take many forms, including reading, observing, practicing, and gaining real-life experience. Each new piece of knowledge adds to your understanding and improves your ability to handle challenges. It also opens new opportunities by expanding your skills and perspectives.
+          <br>
+          <br>
+          Curiosity plays a major role in continuous learning. When you remain curious, you are more likely to explore new ideas and seek out information. This mindset helps you stay adaptable and ready for change.
+          <br>
+          <br>
+          Continuous learning also builds confidence. As you gain knowledge and experience, you become more capable and prepared to face different situations. This not only improves your performance but also increases your chances of success. By committing to lifelong learning, you ensure that you are always growing and moving forward.
+        </div>
+        <div class="articles">
+          <b>10. Balance and Well-Being Sustain Success</b>
+          <br>
+          <br>
+          Success is not just about achieving goals—it is also about maintaining a healthy and fulfilling life. Without balance, even great achievements can feel empty. Overworking yourself without rest can lead to burnout, stress, and reduced productivity.
+          <br>
+          <br>
+          Maintaining well-being involves taking care of both your physical and mental health. Regular rest, proper nutrition, and relaxation are essential for maintaining energy and focus. When you are healthy, you are better equipped to handle challenges and perform at your best.
+          <br>
+          <br>
+          Balance also includes managing relationships and personal time. Spending time with family, friends, and engaging in activities you enjoy contributes to overall happiness. These aspects of life provide support and motivation, making your journey more meaningful.
+          <br>
+          <br>
+          Successful individuals understand that long-term achievement requires sustainability. By maintaining balance, you ensure that you can continue working toward your goals without sacrificing your well-being. True success is not just about reaching the top, but about enjoying the journey and living a fulfilling life along the way.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
